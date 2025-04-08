@@ -12,14 +12,15 @@ Leia o enunciado completo no Canvas.
 
 ## Informações Gerais
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Gabriel Lott Vilela
+- Matricula: 891416
+- Proposta de projeto escolhida:Site de noticias    
+- Breve descrição sobre seu projeto:deixar os leitores informados sobre as ultimas noticias no brasil
 
 ## Print da versão responsiva com CSS puro
 
-<<  COLOQUE A IMAGEM AQUI >>
+![alt text](public/semana7css.png)
+![alt text](public/semanaa7css.png)
 
 ## Print da versão responsiva com Bootstrap
 

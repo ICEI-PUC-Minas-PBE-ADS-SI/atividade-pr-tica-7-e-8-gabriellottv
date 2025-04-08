@@ -64,27 +64,33 @@ const noticias = [
 
 function criarCardNoticia(noticia) {
     return `
-        <article class="noticia-card">
-            <img src="${noticia.imagem}" alt="${noticia.titulo}">
-            <div class="noticia-card-content">
-                <h2>${noticia.titulo}</h2>
-                <p>${noticia.resumo}</p>
-                <p><small>Por ${noticia.autor} - ${noticia.data} - ${noticia.categoria}</small></p>
-                <a href="detalhes.html?id=${noticia.id}">Ler mais</a>
-            </div>
-        </article>
+        <div class="col-md-6 col-lg-4 mb-4">
+            <article class="card h-100">
+                <img src="${noticia.imagem}" class="card-img-top" alt="${noticia.titulo}">
+                <div class="card-body">
+                    <h2 class="card-title h5">${noticia.titulo}</h2>
+                    <p class="card-text">${noticia.resumo}</p>
+                    <p class="card-text"><small class="text-muted">Por ${noticia.autor} - ${noticia.data} - ${noticia.categoria}</small></p>
+                    <a href="detalhes.html?id=${noticia.id}" class="btn btn-primary">Ler mais</a>
+                </div>
+            </article>
+        </div>
     `;
 }
 
 function exibirDetalhesNoticia(noticia) {
     return `
-        <img src="${noticia.imagem}" alt="${noticia.titulo}">
-        <h1>${noticia.titulo}</h1>
-        <div class="meta">
-            <p>Por ${noticia.autor} - ${noticia.data} - ${noticia.categoria}</p>
-        </div>
-        <div class="conteudo">
-            ${noticia.conteudo.split('\n').map(paragrafo => `<p>${paragrafo}</p>`).join('')}
+        <div class="card">
+            <img src="${noticia.imagem}" class="card-img-top" alt="${noticia.titulo}">
+            <div class="card-body">
+                <h1 class="card-title">${noticia.titulo}</h1>
+                <div class="meta text-muted mb-3">
+                    <p>Por ${noticia.autor} - ${noticia.data} - ${noticia.categoria}</p>
+                </div>
+                <div class="conteudo">
+                    ${noticia.conteudo.split('\n').map(paragrafo => `<p>${paragrafo}</p>`).join('')}
+                </div>
+            </div>
         </div>
     `;
 }
